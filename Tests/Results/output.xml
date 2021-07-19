@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20210719 12:16:38.555" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<suite source="C:\Users\P057997\PycharmProjects\GOContact_Challenge\Tests" id="s1" name="Tests">
+<suite source="C:\Users\P057997\PycharmProjects\GOContact_Challenge\Tests\GitHub_Tests.robot" id="s1-s1" name="GitHub Tests">
+<test id="s1-s1-t1" name="Project - Search and Remove an Existing Project">
+<kw type="setup" name="Open GitHub Website" library="WEB_keywords">
+<doc>Open GitHub URL in browser and maximize it.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${\n}Open and Maximizing Browser Window.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:38.822" starttime="20210719 12:16:38.822"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${GITHUB_URL}</arg>
+<arg>${GITHUB_BROWSER}</arg>
+</arguments>
+<msg timestamp="20210719 12:16:38.822" level="INFO">Opening browser 'chrome' to base url 'https://github.com'.</msg>
+<status status="PASS" endtime="20210719 12:16:43.265" starttime="20210719 12:16:38.822"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210719 12:16:46.820" starttime="20210719 12:16:43.266"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:46.821" starttime="20210719 12:16:46.820"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//a[text()[contains(.,'Sign up')]]</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:47.091" starttime="20210719 12:16:46.822"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>GitHub Website open.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:47.094" starttime="20210719 12:16:47.091"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:47.094" starttime="20210719 12:16:38.822"></status>
+</kw>
+<kw name="Go to GitHub Sign In Page" library="WEB_keywords">
+<doc>Go to Sign In in the GitHub Page.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[text()[contains(.,'Sign in')]]</arg>
+</arguments>
+<msg timestamp="20210719 12:16:47.096" level="INFO">Clicking element '//a[text()[contains(.,'Sign in')]]'.</msg>
+<status status="PASS" endtime="20210719 12:16:48.126" starttime="20210719 12:16:47.096"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Sign in to GitHub</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:48.343" starttime="20210719 12:16:48.126"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>GitHub Sign In page.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:48.343" starttime="20210719 12:16:48.343"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:48.344" starttime="20210719 12:16:47.095"></status>
+</kw>
+<kw name="Login in GitHub Website" library="WEB_keywords">
+<doc>In the Sign In Page, insert credentials and validate that user is logged in.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=login</arg>
+<arg>${GITHUB_LOGIN}</arg>
+</arguments>
+<msg timestamp="20210719 12:16:48.344" level="INFO">Typing text 'GoContact.Challenge@gmail.com' into text field 'name=login'.</msg>
+<status status="PASS" endtime="20210719 12:16:49.104" starttime="20210719 12:16:48.344"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>${GITHUB_PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210719 12:16:49.104" level="INFO">Typing password into text field 'name=password'.</msg>
+<status status="PASS" endtime="20210719 12:16:49.847" starttime="20210719 12:16:49.104"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@value='Sign in']</arg>
+</arguments>
+<msg timestamp="20210719 12:16:49.847" level="INFO">Clicking element '//input[@value='Sign in']'.</msg>
+<status status="PASS" endtime="20210719 12:16:51.913" starttime="20210719 12:16:49.847"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//summary[@aria-label='View profile and more']</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:52.133" starttime="20210719 12:16:51.913"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Log in in GitHub with success.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:52.134" starttime="20210719 12:16:52.133"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:52.134" starttime="20210719 12:16:48.344"></status>
+</kw>
+<kw name="Click in Sub Menu Option" library="WEB_keywords">
+<doc>Select subsection inside User "Profile Pic". Options can be any from list: Your profile, Your repositories, Your codespaces, Upgrade, Feature Preview, Help or Settings</doc>
+<arguments>
+<arg>Your projects</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Go to sub menu option '${option}'.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:52.135" starttime="20210719 12:16:52.134"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//summary[@aria-label='View profile and more']</arg>
+</arguments>
+<msg timestamp="20210719 12:16:52.135" level="INFO">Clicking element '//summary[@aria-label='View profile and more']'.</msg>
+<status status="PASS" endtime="20210719 12:16:52.612" starttime="20210719 12:16:52.135"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//details-menu/a[text()='Your projects']</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:53.460" starttime="20210719 12:16:52.612"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${option}' == 'Sign Out'</arg>
+<arg>Click Element</arg>
+<arg>//details-menu//button[text()[contains(.,'Sign out')]]</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>//details-menu/a[text()='${option}']</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//details-menu/a[text()='${option}']</arg>
+</arguments>
+<msg timestamp="20210719 12:16:53.460" level="INFO">Clicking element '//details-menu/a[text()='Your projects']'.</msg>
+<status status="PASS" endtime="20210719 12:16:54.911" starttime="20210719 12:16:53.460"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:54.911" starttime="20210719 12:16:53.460"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:54.911" starttime="20210719 12:16:52.134"></status>
+</kw>
+<kw name="Search for a Project" library="WEB_keywords">
+<doc>Search for an existing project to handle in another keywords.</doc>
+<arguments>
+<arg>ProjectTest</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Search for a Project: ${project_name}.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:54.913" starttime="20210719 12:16:54.912"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[@id='user-projects-list']//input</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:55.356" starttime="20210719 12:16:54.913"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//div[@id='user-projects-list']//input</arg>
+<arg>${project_name}${\n}</arg>
+</arguments>
+<msg timestamp="20210719 12:16:55.356" level="INFO">Typing text 'ProjectTest
+' into text field '//div[@id='user-projects-list']//input'.</msg>
+<status status="PASS" endtime="20210719 12:16:56.096" starttime="20210719 12:16:55.356"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//a[text()[contains(.,'${project_name}')]]</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:56.528" starttime="20210719 12:16:56.096"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:56.528" starttime="20210719 12:16:54.911"></status>
+</kw>
+<kw name="Open Project Menu Options and Select Sub Option" library="WEB_keywords">
+<doc>Options can be Edit or Settings. Close is an 'a' not a 'button'</doc>
+<arguments>
+<arg>ProjectTest</arg>
+<arg>Edit</arg>
+</arguments>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>(//a[text()[contains(.,'${project_name}')]])[1]</arg>
+</arguments>
+<assign>
+<var>${project_name_select}</var>
+</assign>
+<msg timestamp="20210719 12:16:56.973" level="INFO">${project_name_select} = ProjectTestNewName_202107191214</msg>
+<status status="PASS" endtime="20210719 12:16:56.973" starttime="20210719 12:16:56.528"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Project Name: ${project_name_select}</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:56.975" starttime="20210719 12:16:56.973"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[text()[contains(.,'${project_name_select}')]]/../../..//summary</arg>
+</arguments>
+<msg timestamp="20210719 12:16:56.975" level="INFO">Clicking element '//a[text()[contains(.,'ProjectTestNewName_202107191214')]]/../../..//summary'.</msg>
+<status status="PASS" endtime="20210719 12:16:57.448" starttime="20210719 12:16:56.975"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Select a project: ${project_name_select}.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:57.448" starttime="20210719 12:16:57.448"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//details-menu//a[text()[contains(.,'Edit')]]</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:57.863" starttime="20210719 12:16:57.448"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Select the sub option: ${sub_option}.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:57.863" starttime="20210719 12:16:57.863"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${sub_option}' == 'Close'</arg>
+<arg>Click Element</arg>
+<arg>//details-menu//button[text()[contains(.,'Close')]]</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>//details-menu//a[text()[contains(.,'${sub_option}')]]</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//details-menu//a[text()[contains(.,'${sub_option}')]]</arg>
+</arguments>
+<msg timestamp="20210719 12:16:57.863" level="INFO">Clicking element '//details-menu//a[text()[contains(.,'Edit')]]'.</msg>
+<status status="PASS" endtime="20210719 12:16:58.696" starttime="20210719 12:16:57.863"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:58.696" starttime="20210719 12:16:57.863"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:16:58.696" starttime="20210719 12:16:56.528"></status>
+</kw>
+<kw name="Delete this Project" library="WEB_keywords">
+<doc>Click to delete the project found and confirm the alert.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Click to delete this project.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:58.697" starttime="20210719 12:16:58.697"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//button[text()='Delete project']</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:59.136" starttime="20210719 12:16:58.697"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[text()='Delete project']</arg>
+</arguments>
+<msg timestamp="20210719 12:16:59.136" level="INFO">Clicking element '//button[text()='Delete project']'.</msg>
+<status status="PASS" endtime="20210719 12:16:59.586" starttime="20210719 12:16:59.136"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Confirm the alert (OK).</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:16:59.587" starttime="20210719 12:16:59.586"></status>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" endtime="20210719 12:17:00.195" starttime="20210719 12:16:59.587"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>(//div[contains(@class, 'container-lg')]//a[text()[contains(.,'New project')]])[1]</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:17:01.211" starttime="20210719 12:17:00.195"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>ProjectDeleted.png</arg>
+</arguments>
+<msg timestamp="20210719 12:17:01.614" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ProjectDeleted.png"&gt;&lt;img src="ProjectDeleted.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210719 12:17:01.614" starttime="20210719 12:17:01.211"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:17:01.614" starttime="20210719 12:16:58.696"></status>
+</kw>
+<kw type="teardown" name="Close GitHub Website" library="WEB_keywords">
+<doc>Close all open browsers.</doc>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20210719 12:17:04.755" starttime="20210719 12:17:01.614"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>All Browsers closed.</arg>
+</arguments>
+<status status="PASS" endtime="20210719 12:17:04.755" starttime="20210719 12:17:04.755"></status>
+</kw>
+<status status="PASS" endtime="20210719 12:17:04.755" starttime="20210719 12:17:01.614"></status>
+</kw>
+<doc>Click in 'Sign In', insert credentials, search for a Project and remove it.</doc>
+<status status="PASS" endtime="20210719 12:17:04.755" critical="yes" starttime="20210719 12:16:38.822"></status>
+</test>
+<status status="PASS" endtime="20210719 12:17:04.755" starttime="20210719 12:16:38.586"></status>
+</suite>
+<status status="PASS" endtime="20210719 12:17:04.755" starttime="20210719 12:16:38.555"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="1">Tests</stat>
+<stat fail="0" id="s1-s1" name="GitHub Tests" pass="1">Tests.GitHub Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

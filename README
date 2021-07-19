@@ -1,0 +1,37 @@
+Instruções para Execução de Testes com Robot Framework + Selenium
+
+Para automatizar e executar testes Roboframework + Selenium basta seguir os próximos passos:
+
+1 - Descarregar e instalar Python 2.7.18 (last version of 2.7)
+https://www.python.org/downloads/release/python-2718/
+(no meu caso: python-2.7.18.amd64.msi)
+(para o correto funcionamento, por favor garantir que o pyhon foi devidamente adicionado às variáveis de ambiente do sistema operativo (automática ou manualmente))
+
+2 - Instalar Robotframework and Selenium Libraries for Python 2.7:
+Na consola executar os seguintes comandos:
+
+pip install robotframework
+
+pip install robotframework-seleniumlibrary
+
+(desta forma o pip irá obter automaticamente a última versão disponível e as suas dependências. Ligação à internet é necessária, caso contrário as libraries deverão ser descarregadas e instaladas uma a uma offline.)
+
+3 – Desenvolvimento e execução de testes
+
+3.1 - Para desenvolvimento e execução pode ser utilizado qualquer editor de texto (ex.: Notepad) e executar via CMD:
+
+robot -d Results --test "Validate Anti Robot Mechanism is Active" C:\GOContact_Challenge\Tests
+
+robot ou robot.exe ou robot.bat > executável Robot Framework para executar testes.
+
+-d Results > directoria onde os resultados serão guardados (log.html, report.html, screenshots, etc).
+(Esta diretoria será criada automaticamente se não existir.
+Se esta flag não for passada, o teste irá guardar os resultados na pasta de onde o utilizador está a executar o comando (não recomendado)).
+
+--test "Test Name" > flag para especificar qual teste a executar. Caso não seja passado o teste a executar, serão executados todos os testes da Suite existente na diretoria passada.
+
+C:\RFTestes\GitHubTests\Tests > Diretoria onde a Robot Framework pode encontrar o(s) teste(s) (--test) a executar.
+
+Exemplo para executar todos os 10 testes da suite de uma só vez:
+C:\GOContact_Challenge> robot –d Results C:\GOContact_Challenge\Tests
+
